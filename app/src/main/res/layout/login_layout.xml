@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:id="@+id/login_text"
+            android:fontFamily="casual"
+            android:textSize="50sp" />
+
+        <Button
+            android:text="Signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/login_lgn_btn"
+            android:layout_toRightOf="@+id/login_lgn_btn"
+            android:layout_toEndOf="@+id/login_lgn_btn"
+            android:layout_marginLeft="57dp"
+            android:layout_marginStart="57dp"
+            android:onClick="to_signup"
+            android:id="@+id/signup_lgn_btn" />
+
+        <Button
+            android:text="Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="login"
+            android:id="@+id/login_lgn_btn"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/icText"
+            android:layout_alignStart="@+id/icText"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginBottom="58dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/icText"
+            android:hint="I.C Number"
+            android:layout_marginTop="70dp"
+            android:layout_below="@+id/login_text"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

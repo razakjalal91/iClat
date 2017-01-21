@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:id="@+id/mainL">
+
+        <TextView
+            android:text="@string/latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LongText"
+            android:layout_toLeftOf="@+id/userId"
+            android:layout_marginTop="23dp"
+            android:id="@+id/latText"
+            android:layout_alignLeft="@+id/idText"
+            android:layout_alignStart="@+id/idText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/LongText"
+            android:id="@+id/longDisp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/userId"
+            android:text="                    "
+            android:layout_alignTop="@+id/LongText"
+            android:layout_toLeftOf="@+id/logout"
+            android:layout_toStartOf="@+id/logout" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/latText"
+            android:layout_toEndOf="@+id/longDisp"
+            android:id="@+id/latDisp"
+            android:textStyle="bold"
+            android:text="                     "
+            android:layout_alignTop="@+id/latText"
+            android:layout_alignLeft="@+id/longDisp"
+            android:layout_alignStart="@+id/longDisp" />
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize"
+            android:id="@+id/toolbar2"
+            app:title="iCLAT"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="@string/longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/LongText"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/idText"
+            android:layout_alignLeft="@+id/idText"
+            android:layout_alignStart="@+id/idText" />
+
+        <Button
+            android:text="@string/logout"
+            android:background="@drawable/logout_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="logout"
+            android:id="@+id/logout"
+            android:textColor="#fff"
+            android:layout_alignBottom="@+id/toolbar2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@color/colorPrimaryDark"
+            android:layout_above="@+id/LongText"
+            android:layout_alignLeft="@+id/idText"
+            android:layout_alignStart="@+id/idText"
+            android:minWidth="100dp"
+            android:minHeight="25dp"
+            android:id="@+id/icBg"
+            android:background="#0000A0"
+            android:layout_alignRight="@+id/logout"
+            android:layout_alignEnd="@+id/logout" />
+
+        <TextView
+            android:text="@string/ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:id="@+id/idText"
+            android:textSize="20sp"
+            android:layout_below="@+id/toolbar2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/ic"
+            android:textStyle="bold"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/idText"
+            android:layout_toRightOf="@+id/idText"
+            android:layout_toEndOf="@+id/idText"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:id="@+id/userId"
+            android:textStyle="bold"
+            android:textColor="@color/ic"
+            android:textSize="20sp" />
+
+        <Button
+            android:text="@string/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stopTimer"
+            android:background="@drawable/round_btn"
+            android:layout_above="@+id/trackLoad"
+            android:layout_alignLeft="@+id/sendLoc"
+            android:layout_alignStart="@+id/sendLoc"
+            android:layout_alignRight="@+id/sendLoc"
+            android:layout_alignEnd="@+id/sendLoc" />
+
+        <Button
+            android:text="@string/track"
+            android:layout_height="wrap_content"
+            android:id="@+id/sendLoc"
+            android:background="@drawable/round_btn"
+            android:ellipsize="none"
+            android:layout_width="wrap_content"
+            android:layout_above="@+id/stopTimer"
+            android:layout_alignLeft="@+id/latText"
+            android:layout_alignStart="@+id/latText"
+            android:layout_marginBottom="30dp"
+            android:layout_alignRight="@+id/icBg"
+            android:layout_alignEnd="@+id/icBg" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:background="@drawable/tracking"
+            android:id="@+id/trackLoad"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="34dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</LinearLayout>

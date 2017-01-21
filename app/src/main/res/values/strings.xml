@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">iCLAT</string>
+    <string name="logout">Logout</string>
+    <string name="track">Track</string>
+    <string name="stop">Stop</string>
+    <string name="longitude">Longitude:</string>
+    <string name="latitude">Latitude:</string>
+    <string name="ic">IC Number:</string>
+</resources>
